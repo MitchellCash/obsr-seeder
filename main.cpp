@@ -400,8 +400,8 @@ extern "C" void* ThreadStats(void*) {
 static const string mainnet_seeds[] = {"main1.seeder.obsr.org", "main1.seeder.obsr.org", "main.obsrseeder1.obsr.xyz", "main.obsrseeder2.obsr.xyz", ""};
 static const string testnet_seeds[] = {"testnet1.seeder.obsr.org",
                                        "testnet2.seeder.obsr.org",
-                                       "testnet.obsrseeder1.obsr.xyz",
-                                       "testnet.obsrseeder2.obsr.xyz",
+                                       "testnet.obsrtestseeder1.obsr.xyz",
+                                       "testnet.obsrtestseeder2.obsr.xyz",
                                        ""};
 static const string *seeds = mainnet_seeds;
 
@@ -459,10 +459,10 @@ int main(int argc, char **argv) {
   bool fDNS = true;
   if (opts.fUseTestNet) {
       printf("Using testnet.\n");
-      pchMessageStart[0] = 0x0b;
-      pchMessageStart[1] = 0x11;
-      pchMessageStart[2] = 0x09;
-      pchMessageStart[3] = 0x07;
+      pchMessageStart[0] = 0x24;
+      pchMessageStart[1] = 0x5c;
+      pchMessageStart[2] = 0xfc;
+      pchMessageStart[3] = 0x14;
       seeds = testnet_seeds;
       fTestNet = true;
   }
