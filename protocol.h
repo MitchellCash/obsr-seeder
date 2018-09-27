@@ -18,7 +18,7 @@
 extern bool fTestNet;
 static inline unsigned short GetDefaultPort(const bool testnet = fTestNet)
 {
-    return testnet ? 18333 : 8333;
+    return testnet ? 29567 : 9567;
 }
 
 //
@@ -78,7 +78,7 @@ class CAddress : public CService
                  pthis->Init();
              if (nType & SER_DISK)
              READWRITE(nVersion);
-             if ((nType & SER_DISK) || (nVersion >= 31402 && !(nType & SER_GETHASH)))
+             if ((nType & SER_DISK) || (nVersion >= 70914 && !(nType & SER_GETHASH)))
              READWRITE(nTime);
              READWRITE(nServices);
              READWRITE(*pip);
